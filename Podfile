@@ -6,7 +6,7 @@ target 'uportthon' do
   use_frameworks!
 
   # Pods for portion
-  pod 'uPortSDK', :path => '../uport-ios-sdk'
+  pod 'ActionSheetPicker-3.0', '~> 2.3.0'
   pod 'BigInt'
   pod 'CryptoSwift'
   pod 'Alamofire', '~> 4.7'
