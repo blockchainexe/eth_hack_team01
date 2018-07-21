@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B37BBBF2102ABF70035CC3E /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B37BBBE2102ABF70035CC3E /* PageVC.swift */; };
+		0B37BBC12102AC6C0035CC3E /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B37BBC02102AC6C0035CC3E /* ProfileVC.swift */; };
+		0B37BBC32102AC800035CC3E /* MatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B37BBC22102AC800035CC3E /* MatchVC.swift */; };
+		0B37BBC52102ACCE0035CC3E /* BootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B37BBC42102ACCE0035CC3E /* BootVC.swift */; };
 		0B61096F21021CAE00E26920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61096E21021CAE00E26920 /* AppDelegate.swift */; };
 		0B61097121021CAE00E26920 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61097021021CAE00E26920 /* ViewController.swift */; };
 		0B61097421021CAE00E26920 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B61097221021CAE00E26920 /* Main.storyboard */; };
@@ -28,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B37BBBE2102ABF70035CC3E /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
+		0B37BBC02102AC6C0035CC3E /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		0B37BBC22102AC800035CC3E /* MatchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchVC.swift; sourceTree = "<group>"; };
+		0B37BBC42102ACCE0035CC3E /* BootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootVC.swift; sourceTree = "<group>"; };
 		0B61096B21021CAE00E26920 /* uportthon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uportthon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B61096E21021CAE00E26920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B61097021021CAE00E26920 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +74,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B37BBBD2102ABD10035CC3E /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				0B61097021021CAE00E26920 /* ViewController.swift */,
+				0B37BBBE2102ABF70035CC3E /* PageVC.swift */,
+				0B37BBC02102AC6C0035CC3E /* ProfileVC.swift */,
+				0B37BBC22102AC800035CC3E /* MatchVC.swift */,
+				0B37BBC42102ACCE0035CC3E /* BootVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		0B61096221021CAE00E26920 = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				0B61096E21021CAE00E26920 /* AppDelegate.swift */,
-				0B61097021021CAE00E26920 /* ViewController.swift */,
+				0B37BBBD2102ABD10035CC3E /* VC */,
 				0B61097221021CAE00E26920 /* Main.storyboard */,
 				0B61097521021CAF00E26920 /* Assets.xcassets */,
 				0B61097721021CAF00E26920 /* LaunchScreen.storyboard */,
@@ -334,7 +354,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B37BBC32102AC800035CC3E /* MatchVC.swift in Sources */,
+				0B37BBC12102AC6C0035CC3E /* ProfileVC.swift in Sources */,
 				0B61097121021CAE00E26920 /* ViewController.swift in Sources */,
+				0B37BBBF2102ABF70035CC3E /* PageVC.swift in Sources */,
+				0B37BBC52102ACCE0035CC3E /* BootVC.swift in Sources */,
 				0B61096F21021CAE00E26920 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,7 +523,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45GENJPBUZ;
 				INFOPLIST_FILE = uportthon/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hi.uportthon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -515,7 +542,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45GENJPBUZ;
 				INFOPLIST_FILE = uportthon/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hi.uportthon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -532,7 +562,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45GENJPBUZ;
 				INFOPLIST_FILE = uportthonTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hi.uportthonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -550,7 +584,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45GENJPBUZ;
 				INFOPLIST_FILE = uportthonTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hi.uportthonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
