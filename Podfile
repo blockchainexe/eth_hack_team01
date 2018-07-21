@@ -10,6 +10,7 @@ target 'uportthon' do
   pod 'CryptoSwift'
   pod 'Alamofire', '~> 4.7'
   pod 'SwiftyJSON'
+  pod 'uPortSDK', :path => '../uport-ios-sdk'
 
   target 'uportthonTests' do
     inherit! :search_paths

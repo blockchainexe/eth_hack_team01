@@ -2,11 +2,23 @@ PODS:
   - Alamofire (4.7.3)
   - BigInt (3.1.0):
     - SipHash (~> 1.2)
+  - CoreEthereum (1.0.4):
+    - ISO8601DateFormatter
   - CryptoSwift (0.10.0)
+  - ISO8601DateFormatter (0.8)
   - Nimble (7.1.3)
   - Quick (1.3.1)
   - SipHash (1.2.2)
   - SwiftyJSON (4.1.0)
+  - uPortSDK (0.1.0):
+    - Alamofire (~> 4.7)
+    - BigInt
+    - CryptoSwift
+    - UPTEthereumSigner
+  - UPTEthereumSigner (1.0.5):
+    - CoreEthereum
+    - Valet (~> 2.4.2)
+  - Valet (2.4.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -15,26 +27,40 @@ DEPENDENCIES:
   - Nimble
   - Quick
   - SwiftyJSON
+  - uPortSDK (from `../uport-ios-sdk`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - BigInt
+    - CoreEthereum
     - CryptoSwift
+    - ISO8601DateFormatter
     - Nimble
     - Quick
     - SipHash
     - SwiftyJSON
+    - UPTEthereumSigner
+    - Valet
+
+EXTERNAL SOURCES:
+  uPortSDK:
+    :path: "../uport-ios-sdk"
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
+  CoreEthereum: 25a58cd277d76ac3272d7e0bc6beea872175d587
   CryptoSwift: 6c778d69282bed3b4e975ff97a79d074f20bb011
+  ISO8601DateFormatter: 4551b6ce4f83185425f583b0b3feb3c7b59b942c
   Nimble: 2839b01d1b31f6a6a7777a221f0d91cf52e8e27b
   Quick: d17304d58d0d169dd0bd1c6e5c28e3318de32a1a
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  uPortSDK: d06be5af6472ec2934a5232e0b8015070f02bb3a
+  UPTEthereumSigner: 79b12de987411f7a4197d4b1bd366171abb837c9
+  Valet: 14463ef24fab8fd5809044ecedb61484b799fdd6
 
-PODFILE CHECKSUM: 0e5e07d18d39b0330947611f01770f6b0c63e8c4
+PODFILE CHECKSUM: ee8a62bde828f0d3111cc8b5689873fc19fb3c8c
 
 COCOAPODS: 1.5.3
