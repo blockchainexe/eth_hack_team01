@@ -37,7 +37,7 @@ class BootVC: UIViewController {
     }
     */
   func openLogin() {
-    var vc = storyboard?.instantiateViewController(withIdentifier: "PageVC")
+    let vc = storyboard?.instantiateViewController(withIdentifier: "PageVC")
     present(vc!, animated: true)
   }
 }

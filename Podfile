@@ -6,10 +6,10 @@ target 'uportthon' do
   use_frameworks!
 
   # Pods for portion
-  pod 'ActionSheetPicker-3.0', '~> 2.3.0'
   pod 'BigInt'
   pod 'CryptoSwift'
   pod 'Alamofire', '~> 4.7'
+  pod 'SwiftyJSON'
 
   target 'uportthonTests' do
     inherit! :search_paths
