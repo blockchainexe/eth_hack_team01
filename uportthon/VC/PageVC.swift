@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PageVC:UIPageViewController {
+class PageVC: UIPageViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.setViewControllers([getProfile()], direction: .forward, animated: true, completion: nil)
@@ -26,8 +26,7 @@ class PageVC:UIPageViewController {
 
 }
 
-
-extension PageVC : UIPageViewControllerDataSource {
+extension PageVC: UIPageViewControllerDataSource {
   func presentationCount(for pageViewController: UIPageViewController) -> Int {
     return 2
   }
