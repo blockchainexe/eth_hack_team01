@@ -20,6 +20,7 @@ class ListVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+      tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "ListCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,23 +32,24 @@ class ListVC: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return Store.shared.list.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+      let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell", for: indexPath) as! ListTableViewCell
+      let v = Store.shared.list[indexPath.row]
+      cell.name.text = v["name"].stringValue
+      cell.lang.text = v["home_city"].stringValue
+      cell.hoby.text = v["current_city"].stringValue
+      // cell.userImage.image = v["name"]
 
-        // Configure the cell...
-
-        return cell
+      return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
