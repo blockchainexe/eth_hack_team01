@@ -10,7 +10,15 @@ import UIKit
 
 class CreateUserVC: UIViewController {
 
-    override func viewDidLoad() {
+  @IBOutlet weak var state1: UITextField!
+  @IBOutlet weak var state2: UITextField!
+
+
+  @IBAction func submit(_ sender: Any) {
+    dismiss(animated: false)
+    bootVC.openLogin()
+  }
+  override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -20,7 +28,6 @@ class CreateUserVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
