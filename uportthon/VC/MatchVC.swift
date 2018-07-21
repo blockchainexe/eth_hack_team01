@@ -9,10 +9,17 @@
 import UIKit
 
 class MatchVC: UIViewController {
+  @objc func match(){
+    let vc = storyboard?.instantiateViewController(withIdentifier: "ListVC")
+    present(vc!, animated: true, completion: nil)
 
-    override func viewDidLoad() {
+  }
+  override func viewDidLoad() {
         super.viewDidLoad()
 
+    let gesture = UISwipeGestureRecognizer(target: self, action: #selector(match))
+    gesture.direction = .up
+    view.addGestureRecognizer(gesture)
         // Do any additional setup after loading the view.
     }
 

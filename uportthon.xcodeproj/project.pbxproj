@@ -13,6 +13,7 @@
 		0B37BBC52102ACCE0035CC3E /* BootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B37BBC42102ACCE0035CC3E /* BootVC.swift */; };
 		0B37BBC72102CA8B0035CC3E /* TutorialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B37BBC62102CA8B0035CC3E /* TutorialVC.swift */; };
 		0B37BBC92102CACE0035CC3E /* CreateUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B37BBC82102CACE0035CC3E /* CreateUserVC.swift */; };
+		0B37BBCC2102EE0B0035CC3E /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B37BBCB2102EE0B0035CC3E /* ListVC.swift */; };
 		0B61096F21021CAE00E26920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61096E21021CAE00E26920 /* AppDelegate.swift */; };
 		0B61097121021CAE00E26920 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61097021021CAE00E26920 /* ViewController.swift */; };
 		0B61097421021CAE00E26920 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B61097221021CAE00E26920 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		0B37BBC42102ACCE0035CC3E /* BootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootVC.swift; sourceTree = "<group>"; };
 		0B37BBC62102CA8B0035CC3E /* TutorialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialVC.swift; sourceTree = "<group>"; };
 		0B37BBC82102CACE0035CC3E /* CreateUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserVC.swift; sourceTree = "<group>"; };
+		0B37BBCB2102EE0B0035CC3E /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		0B61096B21021CAE00E26920 /* uportthon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uportthon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B61096E21021CAE00E26920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B61097021021CAE00E26920 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				0B37BBBE2102ABF70035CC3E /* PageVC.swift */,
 				0B37BBC02102AC6C0035CC3E /* ProfileVC.swift */,
 				0B37BBC22102AC800035CC3E /* MatchVC.swift */,
+				0B37BBCB2102EE0B0035CC3E /* ListVC.swift */,
 				0B37BBC42102ACCE0035CC3E /* BootVC.swift */,
 				0B37BBC62102CA8B0035CC3E /* TutorialVC.swift */,
 				0B37BBC82102CACE0035CC3E /* CreateUserVC.swift */,
@@ -350,6 +353,7 @@
 				0B37BBC12102AC6C0035CC3E /* ProfileVC.swift in Sources */,
 				0B61097121021CAE00E26920 /* ViewController.swift in Sources */,
 				0B37BBBF2102ABF70035CC3E /* PageVC.swift in Sources */,
+				0B37BBCC2102EE0B0035CC3E /* ListVC.swift in Sources */,
 				0B37BBC52102ACCE0035CC3E /* BootVC.swift in Sources */,
 				0B61096F21021CAE00E26920 /* AppDelegate.swift in Sources */,
 			);

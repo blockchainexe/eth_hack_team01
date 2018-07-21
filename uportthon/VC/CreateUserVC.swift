@@ -13,10 +13,10 @@ class CreateUserVC: UIViewController {
 
   @IBOutlet weak var state1: UITextField!
   @IBOutlet weak var state2: UITextField!
-  var publicKey:String = "xxx"
+  var publicKey: String = "xxx"
 
   @IBAction func submit(_ sender: Any) {
-    let req = request("https://wdoms43kzb.execute-api.us-east-1.amazonaws.com/dev/users", method: .post, parameters: ["public_key":publicKey,"hoby":state1.text!,"language":state2.text!], encoding:URLEncoding.default , headers: nil)
+    let req = request("https://wdoms43kzb.execute-api.us-east-1.amazonaws.com/dev/users", method: .post, parameters: ["public_key":publicKey, "hoby":state1.text!, "language":state2.text!], encoding:URLEncoding.default, headers: nil)
     req.responseJSON(completionHandler: { (response) in
       guard let object = response.result.value else {
         return
@@ -29,9 +29,8 @@ class CreateUserVC: UIViewController {
 
   }
 
-  var langPick = ["japanese","english"]
-  var hobyPick = ["tennis","baseball"]
-
+  var langPick = ["japanese", "english"]
+  var hobyPick = ["tennis", "baseball"]
 
   override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +39,8 @@ class CreateUserVC: UIViewController {
     let pickerView1 = UIPickerView()
     let pickerView2 = UIPickerView()
 
-    pickerView1.delegate = Picker(pickOption: hobyPick,state1)
-    pickerView2.delegate = Picker(pickOption: langPick,state2)
+    pickerView1.delegate = Picker(pickOption: hobyPick, state1)
+    pickerView2.delegate = Picker(pickOption: langPick, state2)
 
 //    state1.inputView = pickerView1
 //    state2.inputView = pickerView2
@@ -64,11 +63,11 @@ class CreateUserVC: UIViewController {
 
 }
 
-class Picker :NSObject ,UIPickerViewDelegate {
+class Picker: NSObject, UIPickerViewDelegate {
 
-  let pickOption:[String]
-  let pickerTextField:UITextField
-  init(pickOption:[String],_ pickerTextField:UITextField) {
+  let pickOption: [String]
+  let pickerTextField: UITextField
+  init(pickOption: [String], _ pickerTextField: UITextField) {
     self.pickOption = pickOption
     self.pickerTextField = pickerTextField
   }
