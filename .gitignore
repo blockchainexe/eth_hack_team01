@@ -150,4 +150,4 @@ Gemfile.lock
 .gitattributes
 
 ### Project Specific ###
-/Pods
+Pods/*
