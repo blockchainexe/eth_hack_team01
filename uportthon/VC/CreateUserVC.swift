@@ -13,7 +13,6 @@ class CreateUserVC: UIViewController {
   @IBOutlet weak var state1: UITextField!
   @IBOutlet weak var state2: UITextField!
 
-
   @IBAction func submit(_ sender: Any) {
     dismiss(animated: false)
     bootVC.openLogin()

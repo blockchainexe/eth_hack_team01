@@ -8,7 +8,7 @@
 
 import UIKit
 
-var bootVC :BootVC!
+var bootVC: BootVC!
 class BootVC: UIViewController {
   @IBAction func login(_ sender: Any) {
     bootVC.openLogin()
@@ -36,7 +36,7 @@ class BootVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-  func openLogin(){
+  func openLogin() {
     var vc = storyboard?.instantiateViewController(withIdentifier: "PageVC")
     present(vc!, animated: true)
   }
