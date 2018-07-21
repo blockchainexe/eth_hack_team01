@@ -10,8 +10,6 @@ import Foundation
 import SwiftyJSON
 class Store {
   static var shared = Store()
-  var publicKey:String = ""
-  var list:JSON = [:]
+  var publicKey: String = ""
+  var list: JSON = [:]
 }
-
-

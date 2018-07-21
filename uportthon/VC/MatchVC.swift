@@ -10,7 +10,6 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-
 class MatchVC: UIViewController {
   @objc func match() {
     let req = request("https://wdoms43kzb.execute-api.us-east-1.amazonaws.com/dev/users?public_key=\(Store.shared.publicKey)")
@@ -23,7 +22,6 @@ class MatchVC: UIViewController {
       let vc = self.storyboard?.instantiateViewController(withIdentifier: "ListVC")
       self.present(vc!, animated: true, completion: nil)
     })
-
 
   }
   override func viewDidLoad() {

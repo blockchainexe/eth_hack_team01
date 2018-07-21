@@ -16,7 +16,6 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
   }
 
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -10,12 +10,10 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-
 class ListVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
