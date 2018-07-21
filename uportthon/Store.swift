@@ -12,4 +12,5 @@ class Store {
   static var shared = Store()
   var publicKey: String = ""
   var list: JSON = [:]
+  var ethAddress:String?
 }

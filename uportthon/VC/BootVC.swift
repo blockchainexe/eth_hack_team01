@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import uPortSDK
 
 var bootVC: BootVC!
 class BootVC: UIViewController {
@@ -37,7 +38,14 @@ class BootVC: UIViewController {
     }
     */
   func openLogin() {
-    let vc = storyboard?.instantiateViewController(withIdentifier: "PageVC")
-    present(vc!, animated: true)
+
+    JWT().JWT { (data, error) in
+      print(error)
+      let url = URL(string: "https://id.uport.me/req/\(String.init(data: data!, encoding: .utf8))")
+      UIApplication.shared.open(url!) { (result) in
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PageVC")
+        self.present(vc!, animated: true)
+      }
+    }
   }
 }
