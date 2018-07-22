@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class MatchVC: UIViewController {
   @objc func match() {
-    let req = request("https://wdoms43kzb.execute-api.us-east-1.amazonaws.com/dev/users?public_key=\(Store.shared.publicKey)")
+    let req = request("https://wdoms43kzb.execute-api.us-east-1.amazonaws.com/dev/users?public_key=\(Store.shared.myKey)")
     req.responseJSON(completionHandler: { (response) in
       guard let object = response.result.value else {
         return

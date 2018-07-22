@@ -13,16 +13,15 @@ class CreateUserVC: UIViewController {
 
   @IBOutlet weak var state1: UITextField!
   @IBOutlet weak var state2: UITextField!
-  var publicKey: String = "xxx"
 
   @IBAction func submit(_ sender: Any) {
-    let req = request("https://wdoms43kzb.execute-api.us-east-1.amazonaws.com/dev/users", method: .post, parameters: ["public_key":publicKey, "hoby":state1.text!, "language":state2.text!], encoding:URLEncoding.default, headers: nil)
+    let req = request("https://wdoms43kzb.execute-api.us-east-1.amazonaws.com/dev/users", method: .post, parameters: ["public_key":Store.shared.myKey, "hoby":state1.text!, "language":state2.text!], encoding:JSONEncoding.default, headers: nil)
     req.responseJSON(completionHandler: { (response) in
       guard let object = response.result.value else {
         return
       }
 
-      _ = JSON(object)
+      print(JSON(object))
       self.dismiss(animated: false)
         bootVC.openLogin()
     })
