@@ -12,28 +12,26 @@ import UPTEthereumSigner
 
 class JWT {
   func JWT(callback:@escaping UPTEthSignerJWTSigningResult) {
-    //  let expectedPayload = "{\"method\":\"eth_call\",\"jsonrpc\":\"2.0\",\"id\":1,\"params\":[{\"to\":\"0xaddress\",\"data\":\"some0xdatastring\"},\"latest\"]}"
-    //  let ethCall = EthCall( address: "0xaddress", data: "some0xdatastring")
-    //  let payload = JsonRpcBaseRequest( ethCall: ethCall ).toJsonRPC()!
-    //
-    //
-    let acc = Account(network: "0x04", address: "0xf12c30cd32b4a027710c150ae742f50db0749213")!
-//    let ethAddress = "2ovgxaCTQaZ7HxdFXyWKtHTh1st5qqEAE53"
     let pKey = "a5b515852a11fa564f905ba3c29327ea11eed568a22c68f58e483e96c098d7b6"
 
-    let json = try! JSONEncoder().encode(JWTPayload())
-//NSData *privateKeyData32Bytes = [[NSData alloc] initWithBase64EncodedString:EXAMPLE_PRIVATE_KEY options:0];
-//    privateKeyData32Bytes: Data =
     UPTEthereumSigner.saveKey(pKey.data(using: .utf8)!, protectionLevel: UPTEthKeychainProtectionLevel.normal) { (ethAddress, publicKey, error) in
       print(error)
       Store.shared.ethAddress = ethAddress
       if let publicKey = publicKey {
         Store.shared.publicKey = publicKey
-
       }
     }
 
-    try! UPTEthereumSigner.signJwt(Store.shared.ethAddress, userPrompt: "sample", data: json, result: callback)
+    let acc = Account(network: "0x04", address: Store.shared.ethAddress!)!
+
+    var payload = JWTPayload()
+    payload.iss = MNID.encode(account:acc)!
+    payload.iat = Int(Date().timeIntervalSince1970 / 1000)
+    payload.sub = MNID.encode(account:acc)!
+    payload.claims = ["name":"Carol Crypteau"]
+    payload.callback = "uport1"
+
+    try! UPTEthereumSigner.signJwt(Store.shared.ethAddress, userPrompt: "exethon", data: JSONEncoder().encode(payload).base64EncodedData(), result: callback)
   }
 
 }

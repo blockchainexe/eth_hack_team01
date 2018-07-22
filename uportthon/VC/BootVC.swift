@@ -39,13 +39,18 @@ class BootVC: UIViewController {
     */
   func openLogin() {
 
-    JWT().JWT { (data, error) in
+    JWT().JWT { (result, error) in
       print(error)
-      let url = URL(string: "https://id.uport.me/req/\(String.init(data: data!, encoding: .utf8))")
-      UIApplication.shared.open(url!) { (result) in
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PageVC")
-        self.present(vc!, animated: true)
+      guard let  jwt = result else {
+        return
       }
+      let url = URL(string: "https://id.uport.me/req/\(jwt.base64EncodedString())")
+      UIApplication.shared.open(url!) { (result) in
+        print(result)
+      }
+      let vc = self.storyboard?.instantiateViewController(withIdentifier: "PageVC")
+      self.present(vc!, animated: true)
+
     }
   }
 }
