@@ -37,7 +37,7 @@ class ListVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Store.shared.list.count
+      return Store.shared.list.count > 3 ? 3 : Store.shared.list.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -46,11 +46,22 @@ class ListVC: UITableViewController {
       cell.name.text = v["name"].stringValue
       cell.lang.text = v["home_city"].stringValue
       cell.hoby.text = v["current_city"].stringValue
-      // cell.userImage.image = v["name"]
+      if let i = v["image"].string {
+        cell.userImage.image = UIImage(named: i)
+      }
 
       return cell
     }
 
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let url = URL(string: "https://id.uport.me/req/")
+    UIApplication.shared.open(url!) { (result) in
+      print(result)
+    }
+
+    Store.shared.list[indexPath.row]["image"] = JSON("p\(indexPath.row)")
+    tableView.reloadData()
+  }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

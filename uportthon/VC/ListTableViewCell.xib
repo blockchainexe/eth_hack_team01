@@ -20,7 +20,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="347" height="128.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gPg-tR-GdR">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gPg-tR-GdR">
                         <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="88" id="cBe-5u-xsB"/>
@@ -74,7 +74,7 @@
                 <outlet property="hoby" destination="23y-5v-Tat" id="4ge-0b-eJd"/>
                 <outlet property="lang" destination="ATW-Ak-Suf" id="aBH-i9-4Vk"/>
                 <outlet property="name" destination="Sst-Rs-142" id="nTd-Wv-P5L"/>
-                <outlet property="userImage" destination="gPg-tR-GdR" id="7uH-gn-wPA"/>
+                <outlet property="userImage" destination="gPg-tR-GdR" id="Tbg-lv-lya"/>
             </connections>
             <point key="canvasLocation" x="95.5" y="74.5"/>
         </tableViewCell>
