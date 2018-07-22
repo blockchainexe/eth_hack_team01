@@ -34,6 +34,8 @@ class CreateUserVC: UIViewController {
   override func viewDidLoad() {
         super.viewDidLoad()
 
+    state1.delegate = self
+    state2.delegate = self
         // Do any additional setup after loading the view.
     let pickerView1 = UIPickerView()
     let pickerView2 = UIPickerView()
@@ -60,6 +62,13 @@ class CreateUserVC: UIViewController {
     }
     */
 
+}
+
+extension CreateUserVC: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return true
+  }
 }
 
 class Picker: NSObject, UIPickerViewDelegate {
