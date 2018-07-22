@@ -44,7 +44,7 @@ class BootVC: UIViewController {
       guard let  jwt = result else {
         return
       }
-      let url = URL(string: "https://id.uport.me/req/\(jwt.base64EncodedString())")
+      let url = URL(string: "https://id.uport.me/req/?attestations=\(jwt.base64EncodedString())&callback_url=\("uport1".data(using: .utf8)!.base64EncodedString())")
       UIApplication.shared.open(url!) { (result) in
         print(result)
       }

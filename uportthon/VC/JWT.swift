@@ -12,27 +12,27 @@ import UPTEthereumSigner
 
 class JWT {
   func JWT(callback:@escaping UPTEthSignerJWTSigningResult) {
-    let pKey = "a5b515852a11fa564f905ba3c29327ea11eed568a22c68f58e483e96c098d7b6"
+    let pKey = BTCDataFromHex("a5b515852a11fa564f905ba3c29327ea11eed568a22c68f58e483e96c098d7b6")
 
-    UPTEthereumSigner.saveKey(pKey.data(using: .utf8)!, protectionLevel: UPTEthKeychainProtectionLevel.normal) { (ethAddress, publicKey, error) in
+    UPTEthereumSigner.saveKey(pKey, protectionLevel: UPTEthKeychainProtectionLevel.normal) { (ethAddress, publicKey, error) in
       print(error)
       Store.shared.ethAddress = ethAddress
       if let publicKey = publicKey {
         Store.shared.publicKey = publicKey
       }
+      let acc = Account(network: "0x04", address: Store.shared.ethAddress!)!
+
+      var payload = JWTPayload()
+      payload.iss = MNID.encode(account:acc)!
+      payload.iat = Int(Date().timeIntervalSince1970 / 1000)
+      payload.sub = MNID.encode(account:acc)!
+      payload.claims = ["name":"Carol Crypteau"]
+
+      try! UPTEthereumSigner.signJwt(Store.shared.ethAddress, userPrompt: "exethon", data: JSONEncoder().encode(payload).base64EncodedData(), result: callback)
     }
-
-    let acc = Account(network: "0x04", address: Store.shared.ethAddress!)!
-
-    var payload = JWTPayload()
-    payload.iss = MNID.encode(account:acc)!
-    payload.iat = Int(Date().timeIntervalSince1970 / 1000)
-    payload.sub = MNID.encode(account:acc)!
-    payload.claims = ["name":"Carol Crypteau"]
-    payload.callback = "uport1"
-
-    try! UPTEthereumSigner.signJwt(Store.shared.ethAddress, userPrompt: "exethon", data: JSONEncoder().encode(payload).base64EncodedData(), result: callback)
   }
+
+
 
 }
 
@@ -45,7 +45,6 @@ class JWTPayload: Codable {
   var sub: String?
   var aud: String?
   var exp: Int?
-  var callback: String?
   var type: String?
 
   /**
