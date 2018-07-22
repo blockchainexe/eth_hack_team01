@@ -32,8 +32,6 @@ class JWT {
     }
   }
 
-
-
 }
 
 class JWTPayload: Codable {
